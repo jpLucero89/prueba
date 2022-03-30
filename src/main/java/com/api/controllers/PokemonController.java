@@ -23,8 +23,8 @@ public class PokemonController {
 		String uri = "https://pokeapi.co/api/v2/pokemon/"+id;
 		RestTemplate restTemplate = new RestTemplate();
 		String result = restTemplate.getForObject(uri,String.class);
-		//Pokemon data = new Gson().fromJson(restTemplate.getForObject(uri,String.class), Pokemon.class);
-		JsonParser parser = new JsonParser();
+		Pokemon data = new Gson().fromJson(restTemplate.getForObject(uri,String.class), Pokemon.class);
+		/*JsonParser parser = new JsonParser();
 
         // Obtain Array
         JsonArray gsonArr = parser.parse(parser).getAsJsonArray();
@@ -33,8 +33,8 @@ public class PokemonController {
         for (JsonElement obj : gsonArr) {
         	
         	System.out.println( obj);
-        }
-		//ps.guardarPokemones(data);
+        }*/
+		ps.guardarPokemones(data);
 		return result;
 	}
 	

@@ -1,5 +1,6 @@
 package com.api.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,7 +40,7 @@ public class PokemonService {
 	}
 	
 	
-	public Double promedio() {
+	/* public Double promedio() {
 		List<Pokemon>pokemones=pr.findAll();
 		Integer total = pokemones.size();
 		Integer suma;
@@ -48,5 +49,36 @@ public class PokemonService {
 		}
 		Double promedio= (double) (suma / total);
 		return promedio;
+	}*/
+	
+	
+/*	public Integer moda(List<String>id) {
+		
+	List<Pokemon>pokemones = new ArrayList<>();
+	for (String string : id) {
+		Optional<Pokemon> a = pr.findById(string);
+		Pokemon b;
+		if(a.isPresent()) {
+			b=a.get();
+		}
+		pokemones.add(b);
 	}
+	
+	int maximaVecesQueSeRepite = 0;
+	int moda = 0;
+	for(int i=0; i<pokemones.size(); i++){
+	int vecesQueSeRepite = 0;
+	for(int j=0; j<pokemones.size(); j++){
+	if(pokemones.get(i) == pokemones.get(j))
+	vecesQueSeRepite++;
+	}
+	if(vecesQueSeRepite > maximaVecesQueSeRepite){
+	moda = pokemones.get(i);
+	maximaVecesQueSeRepite = vecesQueSeRepite;
+	}
+	}
+
+	System.out.println("La moda es "+moda+" y se repitió "+maximaVecesQueSeRepite+" veces.");
+	}
+	*/
 }

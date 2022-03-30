@@ -14,7 +14,7 @@ public class Pokemon {
 	private Integer weight;
 	private Integer height;
 	private Integer base_experience;
-	private String stats;
+	private List stats;
 	
 
 	public String getId() {
@@ -23,10 +23,11 @@ public class Pokemon {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getStats() {
+
+	public List getStats() {
 		return stats;
 	}
-	public void setStats(String stats) {
+	public void setStats(List stats) {
 		this.stats = stats;
 	}
 	public String getName() {
