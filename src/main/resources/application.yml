@@ -1,0 +1,36 @@
+spring:
+  servlet: 
+    multipart:
+       max-file-size: 10MB
+       max-request-size: 10MB
+
+  mail: 
+    host:
+    port: 587
+    username: 
+    password: 
+    properties:
+        mail:
+            smtp:              
+                auth: true
+                starttls:
+                    enable: false
+  datasource: 
+
+    url: jdbc:mysql://localhost:3306/pokemon?allowPublicKeyRetrieval=true&useSSL=false&useTimezone=true&serverTimezone=GMT&characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver 
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect    
+  thymeleaf:
+    cache: false 
+server:
+  error:
+    whitelabel:
+      enabled: false
